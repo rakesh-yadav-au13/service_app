@@ -2,9 +2,9 @@
     <section class=" flex mx-auto justify-center pt-24">
         <form action="/login" method="POST"
             class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col w-1/4">
-            {{!-- {{#if messages.error}} --}}
+            {{#if messages.error}}
             <span class="text-red-500 font-bold text-center">{{messages.error}}</span>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="mb-2"> 
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                     Email

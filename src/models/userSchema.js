@@ -7,6 +7,10 @@ const ProfileSchema = mongoose.Schema({
     image:String,
     phone:String,
     city:String,
+    jobsDone:{
+        type:Number,
+        default:0
+    },
     createdAt :{
         type:Date,
         default: Date.now
@@ -17,7 +21,6 @@ const UserSchema = mongoose.Schema({
     name : String,
     email:String,
     password:String,
-    role:String,
     profile:ProfileSchema,
     createdAt :{
         type:Date,

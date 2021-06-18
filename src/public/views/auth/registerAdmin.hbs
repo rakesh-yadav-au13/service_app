@@ -1,9 +1,14 @@
 <!-- component -->
-<div class="grid min-h-screen place-items-center">
-    <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+<div class="grid min-h-screen place-items-center my-8 ">
+    <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow">
         <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to
                 continue</span></h1>
-        <form action="/register/admin" method="POST" class="mt-2">
+        {{#if messages.error}}
+        <div class="text-center font-bold text-md text-center text-red-500">
+            <span>{{messages.error}}</span>
+        </div>
+        {{/if}}
+        <form action="/register/admin" method="POST" class="mt-2" enctype="multipart/form-data">
             <div class="flex w-full items-center justify-center bg-grey-lighter mb-2">
                 <label class=" flex flex-col items-center px-4 py-6  rounded-lg  tracking-wide  cursor-pointer">
                     <svg version="1.1" id="Capa_2" width="80px" class="bg-gray-200  rounded-full" height="80px"
@@ -77,10 +82,11 @@ C464,288.704,448.328,333.792,421.832,370.584z" />
                         Role
                     </label>
                     <select name="role" id="role" class="shadow border rounded w-full py-2 px-3 text-grey-darker">
+                        <option disabled>Select your role</option>
                         <option value="plumber">Plumber</option>
                         <option value="electrician">Electrician</option>
                         <option value="carpanter">Carpanter</option>
-                        <option value="made">Made</option>
+                        <option value="maid">Maid</option>
                     </select>
                 </span>
                 <span class="w-1/2">
@@ -110,7 +116,7 @@ C464,288.704,448.328,333.792,421.832,370.584z" />
             </div>
 
             <button type="submit"
-                class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                class="w-full py-3 mt-6 font-bold tracking-widest text-white uppercase main-btn shadow-lg focus:outline-none hover:shadow-none">
                 Submit
             </button>
         </form>

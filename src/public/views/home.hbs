@@ -1,8 +1,7 @@
 <section class="home">
     <div class=" container mx-auto flex items-center justify-center h-96">
         <div class="text-center">
-            <h6 class="text-lg text-white mb-4"><em>Are you hungary?</em></h6>
-            <h1 class="text-6xl text-white font-bold m-4">Don't Wait !</h1>
+            <h1 class=" text-6xl text-white font-bold m-4">Dream Service !</h1>
             <a class="main-btn inline-block rounded-full px-6 py-2 mt-4 text-white font-bold">Order now</a>
         </div>
     </div>
@@ -10,32 +9,39 @@
 
 <section class="container mx-auto py-8 ">
     <h1 class="text-xl font-bold mb-8">All Service Providers</h1>
+    {{#if messages.error}}
+    <div id="error-alert" class="text-center rounded-full">
+        <div class="text-white my-2 font-bold">{{messages.error}}</div>
+    </div>
+    {{/if}}
     <div class="grid grid-cols-4 gap-y-10 gap-x-10 ">
         {{#each data}}
         <div class="menu-card pb-2 bg-white">
             <div>
-                <img class="h-40 w-full img " src="../img/{{profile.image}}" alt="">
+                <img class="h-48 w-full img" src="../img/{{profile.image}}" alt="">
             </div>
             <div class="text-center">
                 <h2 class="text-lg font-bold mb-2 capitalize">{{name}}</h2>
-                <h4 class="font-bold text-sm capitalize mb-2"><span class="bg-gray-300 px-4 py-2 shadow-lg rounded-full ">{{profile.role}}</span>
+                <h4 class="font-bold text-sm capitalize mb-2"><span
+                        class="bg-gray-300 px-4 py-2 shadow-lg rounded-full ">{{profile.role}}</span>
                 </h4>
-                <h4 class="text-sm font-bold px-2 py-2">{{profile.phone}}</h4>
+                <div>
+
+                </div>
                 <div class="flex items-center justify-around ">
                     <span class="text-sm font-bold px-2 py-2 ">{{profile.city}}</span>
                     <span class="font-bold text-sm  px-2 py-2 capitalize">{{profile.status}}</span>
                 </div>
-                <div class="flex items-center justify-around mt-4">
+                <div class="flex items-center justify-around ">
                     <span class="font-bold text-sm">₹ {{profile.price}} / hour</span>
                     <a href="/profile/{{_id}}"
                         class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold text-sm">
                         <span>+</span>
-                        <span class="ml-4">Book</span>
+                        <span class="ml-4">Profile</span>
                     </a>
                 </div>
             </div>
         </div>
         {{/each}}
-
     </div>
 </section>

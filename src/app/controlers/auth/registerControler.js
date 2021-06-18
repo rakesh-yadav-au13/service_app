@@ -53,7 +53,7 @@ const RegisterControler = {
 
     async postAdminRegister(req, res) {
         try {
-            const { name, email, password, phone, role, city, image, status, price } = req.body;
+            const { name, email, password, phone, role, city, status, price } = req.body;
             if (!name || !email || !password || !phone || !role || !city || !status || !price){
                 req.flash('error', 'All fields requiered')
                 return res.render('auth/registerAdmin', {
@@ -72,9 +72,8 @@ const RegisterControler = {
                 name: name,
                 email: email,
                 password: hashPassword,
-                image: image || 'avatar.jpg',
                 profile:{
-                    image:image || 'avatar.jpg',
+                    image:req.file.filename || 'avatar.jpg',
                     phone,
                     role,
                     city,

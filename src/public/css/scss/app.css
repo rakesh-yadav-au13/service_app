@@ -7,12 +7,28 @@ body {
   background-color: #f8f8f8;
 }
 
-nav li:last-child a {
-  background-color: #ff6b81;
+.nav-bg {
+  background-color: white;
 }
 
-nav li:last-child a:hover {
-  background-color: #ff4757;
+.nav-logo {
+  font-family: 'Redressed', cursive;
+}
+
+.nav-logo .logo-1 {
+  color: #ff6b81;
+}
+
+.nav-logo .logo-2 {
+  color: #ff4757;
+}
+
+nav li:last-child span {
+  color: #ff4757;
+}
+
+nav li:last-child span i {
+  color: black;
 }
 
 nav li a {
@@ -43,6 +59,10 @@ nav li a:hover {
   background-repeat: no-repeat;
   width: 100%;
   height: 400px;
+}
+
+.home h1 {
+  font-family: 'Redressed', cursive;
 }
 
 .menu-card {
@@ -83,5 +103,70 @@ nav li a:hover {
 
 .add-to-cart:focus {
   outline: none;
+}
+
+.top-div {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://www.pixelstalk.net/wp-content/uploads/2016/07/1080P-3D-Images-For-Desktop-620x349.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.pixelstalk.net/wp-content/uploads/2016/07/1080P-3D-Images-For-Desktop-620x349.jpg");
+}
+
+.heading-name {
+  color: #ff4757;
+}
+
+#error-alert {
+  width: 250px;
+  height: 40px;
+  background-color: #ff6b81;
+  position: absolute;
+  top: 20%;
+  right: 20px;
+  -webkit-box-shadow: 5px 5px 10px #dad5d5;
+          box-shadow: 5px 5px 10px #dad5d5;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /*Sit on top*/
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #888;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+.spam-div {
+  border: 2px solid black;
+}
+
+#statusOption {
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+#statusOption option {
+  font-size: 0.875rem;
+  font-weight: 800;
 }
 /*# sourceMappingURL=app.css.map */
